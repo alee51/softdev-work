@@ -5,6 +5,20 @@
 # 2024-09-17
 # time spent: 1 hour
 
+# warning: will not work if "$$$" or "@@@" are substrings of names
+
+'''
+DISCO:
+- Triple quotes give you a block comment
+- open(<filename>) opens a file
+- file.read() extracts the contents from the file
+- str.split(str2) splits str by str2 and returns a list with the elements
+- list.append(<>) adds to the end of a list
+- list() converts list-like data types to lists!
+QCC:
+- It's annoying that <dictionary>.keys() and <dictionary>.values() don't return lists
+'''
+
 import random
 k = open('krewes.txt')
 
@@ -13,7 +27,7 @@ k_str = k.read()
 # print(k_str[0])
 
 # list of dictionaries representing each devo
-# each dictionary is of the form {<name>: [<period>, <ducky>}
+# each dictionary is of the form {<name>: [<period>, <ducky>]}
 
 k_list = k_str.split("@@@")
 # k_list is a list of devos, with $$$ still included
@@ -27,12 +41,7 @@ for i in k_list:
 # print(k_list2)
 random_devo = random.choice(k_list2)
 # randomly selected a devo
-
-keys = random_devo.keys()
-for key in keys:
-	print("Devo name: " + key)
-values = random_devo.values()
-for value in values:
-	print("Period: " + value[0])
-	print("Ducky name: " + value[1])
+print("Devo: " + list(random_devo.keys())[0])
+print("Period: " + list(random_devo.values())[0][0])
+print("Ducky name: " + list(random_devo.values())[0][1])
 # prints random devo's name, period, and ducky name
