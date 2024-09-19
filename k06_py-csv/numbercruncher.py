@@ -5,10 +5,10 @@ DISCO:
   - default value of maxsplit is -1
 '''
 import random
-file = open('occupations.csv')
-string = file.read()
-arr = string.split("\n")[1:-2]
-# print(string)
+with open("occupations.csv", "r") as file:
+    f = file.read()
+arr = f.split("\n")[1:-2]
+# print(f)
 # print(arr)
 d = {}
 for i in arr:
