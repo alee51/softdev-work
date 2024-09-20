@@ -6,6 +6,7 @@
 '''
 DISCO:
 - new way to open and read files (lines 28-29) automatically closes the stream after it's done
+- EDIT: a cleaner way to read in csv files is by importing csv and using csv.reader(file)
 - to add to a dictionary, use .update()
 - for .rsplit(), need to specify a maxsplit (maximum number of splits)
   - default value of maxsplit is -1, which will achieve the same as .split()
@@ -24,21 +25,19 @@ HOW THIS SCRIPT WORKS:
   - list of weights from values of dictionary
 '''
 import random
+import csv
 # open and read the csv file
 with open("occupations.csv", "r") as file:
-    f = file.read()
-
-# list of strings "<occupation>,<percentage>", disregard first and last lines
-arr = f.split("\n")[1:-2]
+    arr = list(csv.reader(file))[1:-2]
 # print(arr)
+# arr is a list of lists [<occupation>, <percentage>], disregard first and last lines
 
 # dictionary with occupations as keys and percentages (converted to floats) as values
 d = {}
 for i in arr:
-    i_split = i.rsplit(",", 1)
-    d.update({i_split[0]:float(i_split[1])})
-# print(d)
+    d.update({i[0]:float(i[1])})
 d.update({"Ducky":0.2}) # the total is only 99.8%, so we added an occupation!
+# print(d)
 
 # chooses a random occupation from the list of keys according to the associated weights in the list of values
 random_occ = random.choices(list(d.keys()), list(d.values()))[0]
