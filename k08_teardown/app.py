@@ -14,15 +14,22 @@ DISCO:
 it will not work in the parent directory
 - you can open links to websites from the terminal!
 - deactivate venv using 'deactivate'
+- '~' is root directory, '/' is home directory
 
 QCC:
 0. I have seen somewhat similar syntax in import statements in java, 
 for packages and custom classes. Perhaps 'from flask import Flask'
 is most similar to importing a custom class from another package.
+EDIT: I thought the question was referring to the previous line;
+the line 'app = Flask(__name__)' reminds me of initializing an
+object in java.
 1. '/' usually acts as a divider; points of reference include:
 - path names in the terminal, where '/' separates directories
 - writing, where '/' separates two words
 - math, where '/' separates numerator and denominator
+Better idea from Mark: 
+- '/' is the home directory
+- @app.route('/') routes the function below it to the home directory
 2. Based on our introduction to venvs in class, I predict that this will print 
 in the terminal, before the prompt, to let you know that you are in the venv.
 3. It will print "(<venv name>)"
