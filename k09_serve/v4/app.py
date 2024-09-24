@@ -1,4 +1,4 @@
-# Clyde 'Thluffy' Sinclair
+# Anastasia Lee
 # SoftDev
 # September 2024
 
@@ -12,5 +12,6 @@ def hello_world():
     return "No hablo queso!"
 
 if __name__ == "__main__":      # true if this file NOT imported
+                                # meaning that we're running app.py, not another program that imported app.py
     app.debug = True            # enable auto-reload upon code change
     app.run()

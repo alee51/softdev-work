@@ -1,4 +1,4 @@
-# Clyde 'Thluffy' Sinclair
+# Anastasia Lee
 # SoftDev
 # September 2024
 
@@ -11,3 +11,5 @@ def hello_world():
 
 app.run()
 
+# even though the 'print(__name__)' line was omitted, the venv still ran properly
+# and '(<venv name>)' was still printed before the prompt in the terminal
