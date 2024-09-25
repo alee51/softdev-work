@@ -4,6 +4,17 @@
 # K09 -- displays random occupation + list of occupations on webpage
 # 2024-09-24
 # Time spent: 0.4 hours
+'''
+DISCO:
+- print(<>) goes to the console
+- return <> goes to the webpage
+- for the webpage, html code works
+- 127.0.0.1 loops back to itself
+- turning on debugging allows the webpage to update when you change code without re-running the program
+QCC:
+- why doesn't "\n" work on the webpage?
+- is there another way/a better way than to return one long string?
+'''
 
 import random
 import csv
@@ -24,7 +35,7 @@ app = Flask(__name__)           #create instance of class Flask
 def hello_world():
     txt = "Team 54<br>Anastasia, Mark, Brian<br>"
     txt += "<h2> A random occupation is chosen: " + randocc() + "</h2><br><br>"
-    txt += "<h3>Here are the list of occupations and their percentages:</h3><br>"
+    txt += "<h3>Here is the list of occupations and their percentages:</h3><br>"
     for key, values in d.items():
         txt += key + '<div align="center">' + str(values) + "</div> <br>"
     return txt
