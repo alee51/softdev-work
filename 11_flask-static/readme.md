@@ -11,7 +11,7 @@ Predictions:
 - If you go to http://localhost:5000/static/foo.html, you will see "Is this plaintext, though?" in the default html font (Times New Roman), which I believe qualifies as formatting, so it is not plaintext
 - If you go to http://localhost:5000/static/foo, you will see plaintext, and I think it will be a different font than Times New Roman
 - If you uncomment the code block in app.py, the function h() will be run:
-  - the name of the module is \__main__, and this will be printed to the terminal
+  - the name of the module is \_\_main__, and this will be printed to the terminal
   - a random number between 0 and 1 will be generated and printed to http://localhost:5000/static/foo.html
   - the random number will not change if you reload the webpage because it is static
 
