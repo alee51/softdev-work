@@ -1,8 +1,8 @@
-Anastasia Lee
-peaches & mangoes
-SoftDev
-K11 -- serving static pages in flask
-2024-09-25
+Anastasia Lee\
+peaches & mangoes\
+SoftDev\
+K11 -- serving static pages in flask\
+2024-09-25\
 time spent: 0.5 hours
 
 Predictions:
