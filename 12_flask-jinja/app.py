@@ -1,4 +1,5 @@
 # Anastasia Lee
+# AID: Anastasia, Ivan, Danny
 # SoftDev
 # Sep 2024
 
@@ -6,14 +7,30 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Q0:
 I predict that the home webpage will be unchanged, but the "/my_foist_template"
-webpage will present an error
+webpage will present an error because the function test_tmplt() will try to use
+render_template without it being imported.
 
 Q1:
 http://localhost:5000/my_foist_template
 
 Q2:
-<your response here>
+The first argument is the file name of the template
+The second argument is the title of the webpage (referenced in the template)
+The third argument is the list that is referenced in the template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DISCO:
+- when you go to http://localhost:5000/my_foist_template, the elements of collection
+are printed on new lines to the webpage titled "fooooo" (as predicted)
+- {{ }} is used for variables
+- <!-- ... --> is a block comment in html
+QCC:
+- does render_template() search through all the directories available, or does
+it look for a folder called "templates"?
+  - the first argument doesn't specify the "templates" folder
+- what does {% %} signify?
+- how does the template know to replace collection with coll if there is no {{ }}?
+- the template uses the html version of a for loop
+  - how does html coding work?
 """
 
 
