@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- 
+  peaches & mangoes: Anastasia Lee, Nia Lam, Naomi Lai
+  SoftDev
+  Oct 2022
+ -->
+
+<html>
+    <!-- style -->
+    <style>
+        table, th, td {
+        border:1px solid black;
+        }
+    </style>
+    
+    <!-- head -->
+    <head>
+        <title> {{ foo }} </title>
+    </head>
+    
+    <!-- body -->
+    <body>
+        <h2> Table of Occupations and a Random Suggestion </h2>
+        <p> peaches & mangoes: Anastasia Lee, Nia Lam, and Naomi Lai </p>
+        
+        <h3> Random Occupation: {{ rand }} </h3>
+        <h3> Table: </h3>
+        <table>
+        {% for key, values in dictionary.items() %}
+            <tr>
+                <td> {{ key }} </td>
+                <td> {{ values[0] }} </td>
+                <td> <a href = {{values[1]}}>{{values[1]}}</a> </td>
+            </tr>
+        {% endfor %}
+        </table>
+
+    </body>
+
+</html>

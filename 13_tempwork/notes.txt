@@ -1,0 +1,14 @@
+- table
+- lists in python can have multiple types
+EGO
+- cognitive dissonance
+- it's bad to treat your code as an extension of yourself,
+because then you don't look for errors and instead ignore them
+- the ability to acknowledge your limitations makes you a better programmer
+- referring to work as "code you wrote" instead of "your code" 
+can help you detach yourself from it
+- people usually don't focus on the social aspect of programming
+- egoless programming is a good practice not only because it reduces
+the number of errors, but also because it encourages people to write
+code that is clear and understandable
+- sharing your code with people reduces variation and increases adaptability
