@@ -2,7 +2,7 @@
 <!-- 
   peaches & mangoes: Anastasia Lee, Nia Lam, Naomi Lai
   SoftDev
-  Oct 2022
+  Sep 2024
  -->
 
 <html>
@@ -26,13 +26,18 @@
         <h3> Random Occupation: {{ rand }} </h3>
         <h3> Table: </h3>
         <table>
-        {% for key, values in dictionary.items() %}
             <tr>
-                <td> {{ key }} </td>
-                <td> {{ values[0] }} </td>
-                <td> <a href = {{values[1]}}>{{values[1]}}</a> </td>
+                <th> Occupation </th>
+                <th> % </th>
+                <th> Helpful Link </th>
             </tr>
-        {% endfor %}
+            {% for key, values in dictionary.items() %}
+                <tr>
+                    <td> {{ key }} </td>
+                    <td> {{ values[0] }} </td>
+                    <td> <a href = {{values[1]}}>{{values[1]}}</a> </td>
+                </tr>
+            {% endfor %}
         </table>
 
     </body>
