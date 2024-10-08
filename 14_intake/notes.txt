@@ -20,6 +20,12 @@ After uncommenting...
 * request.args is an ImmutableMultiDict with the variables from the form and their values
 * request.args['username'] in authenticate() is the username that was submitted
 * request.headers contains a lot of backend information, like the host, user agent, etc.
+
+After reading the notes and trying ourselves...
+* GET requests can be seen in the URL (appended after ".../auth", while POST requests cannot (but they are still not secure)
+* request.args has the variables from GET requests, request.form has the variables from POST requests (and is also an immutable dictionary)
+* GET is the default method in the HTML template, but you can specify using POST by adding method="POST" to the line that begins the form
+* You don't need to specify methods=['GET'] in the app route, but you do need to include methods=['POST']
 -----------------------------------------------------------------------
 
 Q/C/C:

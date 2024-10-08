@@ -1,4 +1,4 @@
-# Clyde 'Thluffy' Sinclair
+# peaches & mangoes: Anastasia, Nia, Naomi
 # SoftDev
 # October 2024
 
@@ -55,7 +55,7 @@ def disp_loginpage():
     return render_template( 'login.html' )
 
 
-@app.route("/auth") # , methods=['GET', 'POST'])
+@app.route("/auth", methods=['GET', 'POST'])
 def authenticate():
     # print("\n\n\n")
     # print("***DIAG: this Flask obj ***")
@@ -68,7 +68,8 @@ def authenticate():
     # print(request.args['username'])
     # print("***DIAG: request.headers ***")
     # print(request.headers)
-    return "Username: " + request.args['username']  #response to a form submission
+    # print(request.form)
+    return "Username: " + request.form['username']  #response to a form submission
 
 
     
