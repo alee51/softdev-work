@@ -22,16 +22,16 @@ After uncommenting...
 * request.headers contains a lot of backend information, like the host, user agent, etc.
 
 After reading the notes and trying ourselves...
-* GET requests can be seen in the URL (appended after ".../auth", while POST requests cannot (but they are still not secure)
+* GET requests can be seen in the URL (appended after ".../auth"), while POST requests cannot (but they are still not secure)
 * request.args has the variables from GET requests, request.form has the variables from POST requests (and is also an immutable dictionary)
 * GET is the default method in the HTML template, but you can specify using POST by adding method="POST" to the line that begins the form
-* You don't need to specify methods=['GET'] in the app route, but you do need to include methods=['POST']
+* You don't need to specify methods=['GET'] in the app route, but you do need to include methods=['POST'] if you're using a POST request
+
+* importing the testmod0 allows you to call methods within testmod0.py, e.g. testmod.goo()
 -----------------------------------------------------------------------
 
 Q/C/C:
-* What are the methods (methods=[‘GET’, ‘POST’])? 
-There are syntax errors when this part is uncommented
 * What are all the possible input types when creating a form in HTML?
 * Does Flask automatically create the modified URL when the form is submitted?
-* What is the purpose of the test module?
+* What are all the benefits of importing python modules?
 * What is __pycache__?

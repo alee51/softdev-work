@@ -62,13 +62,17 @@ def authenticate():
     # print(app)
     # print("***DIAG: request obj ***")
     # print(request)
-    # print("***DIAG: request.args ***")
+    # print("***DIAG: request.args ***")    #for GET requests
     # print(request.args)
     # print("***DIAG: request.args['username']  ***")
     # print(request.args['username'])
     # print("***DIAG: request.headers ***")
     # print(request.headers)
+
+    # print("***DIAG: request.form ***")    # for POST requests
     # print(request.form)
+
+    # return testmod0.goo()     # possible because testmod0 was imported
     return "Username: " + request.form['username']  #response to a form submission
 
 
