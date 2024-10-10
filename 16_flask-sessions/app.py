@@ -1,4 +1,4 @@
-# &: Anastasia Lee, Nia Lam, Naomi Lai
+# peaches & mangoes: Anastasia Lee, Nia Lam, Naomi Lai
 # SoftDev
 # October 2024
 
@@ -11,8 +11,6 @@ app.secret_key = os.urandom(32)
 
 @app.route("/", methods=['GET', 'POST'])
 def disp_loginpage():
-    print("SESSION")
-    print(session)
     # print("\n\n\n")
     # print("***DIAG: this Flask obj ***")
     # print(app)
@@ -44,17 +42,15 @@ def authenticate():
     # print("***DIAG: request.form ***")    # for POST requests
     # print(request.form)
     
-    print("REQUEST COOKIES")
-    print(request.cookies.get('username'))
-    # username = request.cookies.get('username')
-    # if (username )
-    
-    session['username'] = request.cookies.get('username')
-    print("DIAG: session username")
-    print(session['username'])
-    return session['username']  #response to a form submission
+    session['username'] = request.form['username']
+    # print("DIAG: session username")
+    # print(session['username'])
+    return render_template( 'response.html', username = session['username'])  #response to a form submission
 
-
+@app.route("/logout", methods=['POST'])
+def disp_logout():
+    session.pop('username')
+    return render_template( 'logout.html' )
     
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
