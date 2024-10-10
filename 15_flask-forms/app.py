@@ -7,7 +7,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)    #create Flask object
 
-@app.route("/", methods=['GET'])
+@app.route("/", methods=['GET', 'POST'])
 def disp_loginpage():
     # print("\n\n\n")
     # print("***DIAG: this Flask obj ***")
@@ -20,10 +20,10 @@ def disp_loginpage():
     # print(request.args['username'])
     # print("***DIAG: request.headers ***")
     # print(request.headers)
-    return render_template( 'response.html' )
+    return render_template( 'login.html' )
 
 
-@app.route("/auth", methods=['POST'])
+@app.route("/auth", methods=['GET', 'POST'])
 def authenticate():
     # print("\n\n\n")
     # print("***DIAG: this Flask obj ***")
@@ -39,9 +39,12 @@ def authenticate():
 
     # print("***DIAG: request.form ***")    # for POST requests
     # print(request.form)
-    return "<h1>RESPONSE PAGE</h1><h2>&: Anastasia Lee, Nia Lam, Dua Baig<br>Request method: POST</h2>Username: " + request.form['username']  #response to a form submission
-
-
+    if (request.method == 'GET'):
+        return render_template( 'response.html', username = request.args['username'] )
+    elif (request.method == 'POST'):
+        return render_template( 'response.html', username = request.form['username'] )
+    return "Invalid request method"
+    
     
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
