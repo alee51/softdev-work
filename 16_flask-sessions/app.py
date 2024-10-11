@@ -3,53 +3,30 @@
 # October 2024
 
 import os
-from flask import Flask, session, render_template, request
+from flask import Flask, session, render_template, request, url_for, redirect
+password = "bye"
 
 app = Flask(__name__)    #create Flask object
 
 app.secret_key = os.urandom(32)
 
 @app.route("/", methods=['GET', 'POST'])
-def disp_loginpage():
-    # print("\n\n\n")
-    # print("***DIAG: this Flask obj ***")
-    # print(app)
-    # print("***DIAG: request obj ***")
-    # print(request)
-    # print("***DIAG: request.args ***")
-    # print(request.args)
-    # print("***DIAG: request.args['username']  ***")
-    # print(request.args['username'])
-    # print("***DIAG: request.headers ***")
-    # print(request.headers)
+def home():
+    if 'username' in session:
+        return render_template('response.html', username = session['username'])
     return render_template( 'login.html' )
 
 
-@app.route("/auth", methods=['GET', 'POST'])
-def authenticate():
-    # print("\n\n\n")
-    # print("***DIAG: this Flask obj ***")
-    # print(app)
-    # print("***DIAG: request obj ***")
-    # print(request)
-    # print("***DIAG: request.args ***")    #for GET requests
-    # print(request.args)
-    # print("***DIAG: request.args['username']  ***")
-    # print(request.args['username'])
-    # print("***DIAG: request.headers ***")
-    # print(request.headers)
-
-    # print("***DIAG: request.form ***")    # for POST requests
-    # print(request.form)
-    
-    session['username'] = request.form['username']
-    # print("DIAG: session username")
-    # print(session['username'])
-    return render_template( 'response.html', username = session['username'])  #response to a form submission
+@app.route("/login", methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        session['username'] = request.form['username']
+        return redirect(url_for('home'))
+    return "Bad request method"
 
 @app.route("/logout", methods=['POST'])
 def disp_logout():
-    session.pop('username')
+    session.pop('username', None)
     return render_template( 'logout.html' )
     
 if __name__ == "__main__": #false if this file imported as module
