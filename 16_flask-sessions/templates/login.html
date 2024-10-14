@@ -22,17 +22,17 @@
       Enter your username below to login.
     </h3>
     <form action="/login" method="POST">
-      <div>
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username">
-      </div>
-      <br>
-      <div>
-          <label for="pass">Password:</label>
-          <input type="password" id="pass" name="pass">
-      </div>
-      <br>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
+      <br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <br><br>
       <input type="submit" name="sub1" value="Log in">
+      {% if wrong_pass %}
+        <br><br>
+        Incorrect password; please try again.
+      {% endif %}
     </form>
     <br>
   </body>
