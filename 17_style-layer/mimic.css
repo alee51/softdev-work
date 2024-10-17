@@ -5,7 +5,7 @@
 */
 html {
     background-color: #666666;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Arial";
 }
 
 body {
@@ -17,6 +17,7 @@ h1 {
     background-color: #bebebe;
     color: white;
     text-align: center;
+    font-family: "Calibri";
     margin-bottom: 0;
 }
 
