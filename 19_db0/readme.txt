@@ -23,7 +23,7 @@ DISCOVERIES:
 
 QUESTIONS/COMMENTS/CONCERNS:
 ----------------------------------------------------
-Q: do we install SQLite in a venv?
+Q: does it matter whether we install SQLite in a venv?
 Q: do we always have to delete db between runs each time, or is there a way around this?
 C: must be careful with the preexistence and creation of new databases
 Q: why is there a semicolon at INSERT and sqlite3 disco..db, and not CREATE TABLE? when do we need semicolons?

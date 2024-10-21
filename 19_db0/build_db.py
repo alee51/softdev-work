@@ -14,7 +14,7 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 #==========================================================
 
-c.execute("CREATE TABLE courses (code TEXT, mark INTEGER, id INTEGER)")
+c.execute("CREATE TABLE courses (code TEXT, mark INTEGER, id INTEGER)")     # create courses table
 with open("courses.csv", "r") as file:
     dict = csv.DictReader(file)
     for row in dict:
@@ -23,7 +23,7 @@ with open("courses.csv", "r") as file:
         # print(command)
         c.execute(command)      # run SQL statement
 
-c.execute("CREATE TABLE students (name TEXT, age INTEGER, id INTEGER)")
+c.execute("CREATE TABLE students (name TEXT, age INTEGER, id INTEGER)")     # create students table
 with open("students.csv", "r") as file:
     dict = csv.DictReader(file)
     for row in dict:
