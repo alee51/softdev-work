@@ -26,7 +26,7 @@ lilyPigs: Anastasia Lee, Andy Shyklo
 1
 ## Q0b: If answer to preceding question is 1, cite all resources consulted -- including verbal consultations and/or neighbouring team's readme. 1citation/line.
 Asked Jady whether she used any JS, and which line in the app.css file disables scrolling\
-Tailwind documentation for the cursor loading effect on the buttons: https://tailwindcss.com/docs/cursor\
+Tailwind documentation for the cursor loading effect on the buttons: https://tailwindcss.com/docs/cursor \
 More information on margins, and some smaller features: https://tailwindcss.com/docs/margin
 ## Q1: At this point, which FEF do you prefer, and why?
 Anastasia: I think I prefer Bootstrap, because it is quite versatile and does not depend on CSS and JS as much as the other FEFs do.\
