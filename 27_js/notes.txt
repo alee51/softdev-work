@@ -1,0 +1,15 @@
+Team TopherAcademy1 :: Anastasia Lee, Mark Ma
+SoftDev pd4
+K27 - Basic functions in JavaScript
+2025-01-06m
+
+DISCO:
+- "var" and  "let" in JS correspond to "define" in Scheme
+- "function" in JS corresponds to "lambda" in Scheme
+  - tells JS that you are defining a function
+- JS uses infix notation, semicolons, curly braces, and return statements like Java does
+- can include JS in HTML using <script src="foo.js"></script>
+
+QCC:
+- can you run JS in the terminal as well as the dev console, or only in the dev console?
+- is there a way to run the test calls from the script in the console?
