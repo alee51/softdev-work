@@ -1,0 +1,22 @@
+Team TopherAcademy1 :: Anastasia Lee, Mark Ma
+SoftDev pd4
+K28 -- "Crash Test DOMmies"
+2025-01-07t
+
+DISCO:
+- when you have colors in style tags in an HTML file, if you put multiple colors in the class="", the color defined later wins
+  - e.g. if you define blue and then green and write <li class="green blue">item 2</li>, item 2 will be green
+  - hence, the red() function only turns item 0 and item 7 red; the other items are overpowered by blue
+  - similarly, the stripe() function doesn't work as is; the blue items never turn red
+  - if you remove the classes for each list item, both red() and stripe() work as intended
+- can get an element by ID: document.getElementById("thelist");
+- can get a list of all elements with a certain tag name: document.getElementsByTagName("li");
+- can create new elements: document.createElement("li"); 
+- can add to a tree: list.appendChild(newitem);
+- can add to an element's class list: items[i].classList.add('red');
+
+QCC:
+- when you run a function in the dev console, the appearance of the website changes without needing to reload!
+- what is meant by "selected" in the comment "color selected elements red"? can you select specific list items?
+- I tried to rewrite red() so that it works no matter what class list the element starts with. 
+  It works, but for some reason I needed to do the process twice?
