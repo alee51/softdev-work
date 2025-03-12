@@ -9,9 +9,14 @@ app.config['SECRET_KEY'] = 'your_secret_key'
 app.register_blueprint(auth_bp)
 app.register_blueprint(story_bp)
 
-@app.before_first_request
+db_initialized = False
+
+@app.before_request
 def initialize_database():
-    init_db()
+    global db_initialized
+    if not db_initialized:
+        init_db()
+        db_initialized = True
 
 @app.route('/')
 def index():
