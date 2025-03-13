@@ -1,8 +1,27 @@
+Brave Bananas: Anastasia Lee, Suhana Kumar
+SoftDev
+K34 -- prompting github copilot to complete p0
+2025-03-12
+Time Spent: _ hours
+
 DISCO:
+- need to enable copilot to access public code, or else it won't write code
+- be patient as the copilot is answering (reloading the page will stop it)
+- copilot response gives citations!
 
 Q/C/C:
 some areas of interest...
 q0: How many tries did it take to "get it right?"
 q1: Did you catch any errors? If so, how did you notice, and what did you do?
+Error #1: 
+@app.before_first_request
+AttributeError: 'Flask' object has no attribute 'before_first_request'. Did you mean: '_got_first_request'?
+
+I showed copilot the error and asked it to fix it. The updated app.py it outputted no longer triggered the error.
+
+Error #2: 
+In the original list of files, the file with SQL was named model.py, so when I ran the app, I got FileNotFoundError: [Errno 2] No such file or directory: 'schema.sql'
+
+I renamed model.py to schema.sql, leading to the first working version of the app.
 q2: 
 
