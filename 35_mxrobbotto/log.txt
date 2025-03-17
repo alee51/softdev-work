@@ -1,17 +1,24 @@
 Brave Bananas: Anastasia Lee, Suhana Kumar
 SoftDev
-K34 -- prompting github copilot to complete p0
-2025-03-12
-Time Spent: _ hours
+K35 -- prompting github copilot to complete p0
+2025-03-17
+Time Spent: 3 hours
 
 DISCO:
 - need to enable copilot to access public code, or else it won't write code
 - be patient as the copilot is answering (reloading the page will stop it)
 - copilot response gives citations!
+- had many mistakes, but was able to revise them once prompted, did not break on itself
+- issues with flash messages, orginally not display them, then displayed on web page as opposed to as a pop down message
+- delays with presentation of flash messsages
+- no css/design elements
+- can retrieve previous versions of code, since copilot automatically re-writes code
+- each file has a different amount of versions as they can be updated seperately
 
 Q/C/C:
 some areas of interest...
 q0: How many tries did it take to "get it right?"
+11?
 q1: Did you catch any errors? If so, how did you notice, and what did you do?
 
 Error #1: 
@@ -25,4 +32,10 @@ In the original list of files, the file with SQL was named model.py, so when I r
 
 I renamed model.py to schema.sql, leading to the first working version of the app.
 
+Error #3: 
+jinja2.exceptions.TemplateNotFound: story.home
 
+I showed copilot the error and asked it to fix it. It showed me the file structure it intended, so I changed the file structure in my repo to match that.
+It intended for there to be an auth directory and a story directory within the templates directory. story.py was written with this intention but auth.py was not, so I fixed auth.py manually.
+
+C: I was impressed by the quality of the code; it eventually worked and took a lot less time than we needed originally!
