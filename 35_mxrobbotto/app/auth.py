@@ -18,7 +18,7 @@ def register():
         except sqlite3.IntegrityError:
             flash('Username already exists. Please choose a different username.')
             return redirect(url_for('auth.register'))
-    return render_template('register.html')
+    return render_template('auth/register.html')
 
 @auth_bp.route('/login', methods=['GET', 'POST'])
 def login():
@@ -36,7 +36,7 @@ def login():
         else:
             flash('Invalid credentials. Please try again.')
             return redirect(url_for('auth.login'))
-    return render_template('login.html')
+    return render_template('auth/login.html')
 
 @auth_bp.route('/logout')
 def logout():
