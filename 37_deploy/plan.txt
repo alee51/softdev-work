@@ -1,0 +1,7 @@
+Anastasia, Suhana
+
+1. Split into two groups of two (Suhana and Anastasia, Dua and Chris)
+2. Install Nginx
+Note: Chris is provisioning a domain name, Suhana, Anastasia, Dua are not
+3. Follow the guide given on Suhana's droplet while Anastasia is the scribe
+4. Repeat what works on Anastasia's droplet
